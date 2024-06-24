@@ -29,7 +29,7 @@ def export_to_file(export_file_path, data):
     Returns:
         None
     """
-    with open(export_file_path, "w") as f:
+    with open(export_file_path, "w", encoding="uft-8") as f:
         for record in data:
             ner_tags = record["ner_tags"]
             tokens = record["tokens"]
